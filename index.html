@@ -56,30 +56,30 @@
             
             <div class="row my-3">
                 <div class="col-12 col-md-6">
-                    <canvas id="chart2"></canvas>
+                    <canvas id="weekend-riders"></canvas>
                 </div>
                 <div class="col-12 col-md-6">
-                    <h4>Some graph blah blah</h4>
+                    <h4>Weekend riders</h4>
+                    <p>27.06% of trips are taken during the weekend.</p>
+                </div>
+            </div>
+            
+            <div class="row my-3">
+                <div class="col-12 col-md-6">
+                    <canvas id="weekend-ride-times"></canvas>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h4>Weekend Ride times</h4>
                     <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
                 </div>
             </div>
             
             <div class="row my-3">
                 <div class="col-12 col-md-6">
-                    <canvas id="chart3"></canvas>
+                    <canvas id="weekday-ride-times"></canvas>
                 </div>
                 <div class="col-12 col-md-6">
-                    <h4>Some graph blah blah</h4>
-                    <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
-                </div>
-            </div>
-            
-            <div class="row my-3">
-                <div class="col-12 col-md-6">
-                    <canvas id="chart4"></canvas>
-                </div>
-                <div class="col-12 col-md-6">
-                    <h4>Some graph blah blah</h4>
+                    <h4>Weekday Ride Times</h4>
                     <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
                 </div>
             </div>
@@ -112,17 +112,36 @@
         }
     });
         
-    
-    var chart2 = document.getElementById("chart2").getContext('2d');
-    var chart3 = document.getElementById("chart3").getContext('2d');
-    var chart4 = document.getElementById("chart4").getContext('2d');
-    var config = {
+    var weekendRiders = new Chart(
+        document.getElementById("weekend-riders").getContext('2d'),
+        {
+        type: 'pie',
+        data: {
+            labels: ["Weekend Rides", "Weekday Rides"],
+            datasets: [{
+                data: [35833, 96594],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)'
+                ],
+                borderWidth: 1
+            }]
+        }
+        });
+        
+    var weekendRideTimes = new Chart(
+        document.getElementById("weekend-ride-times").getContext("2d"),
+        {
         type: 'bar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            labels: ["4am", "8am", "12pm", "4pm", "8pm", "12am"],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: '# of Rides',
+                data: [2289, 1413, 8773, 11985, 8039, 3334],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -151,11 +170,47 @@
                 }]
             }
         }
-    };
-    
-    var chart2 = new Chart(chart2, config);
-    var chart3 = new Chart(chart3, config);
-    var chart4 = new Chart(chart4, config);
+    });
+        
+    var weekendRideTimes = new Chart(
+        document.getElementById("weekday-ride-times").getContext("2d"),
+        {
+        type: 'bar',
+        data: {
+            labels: ["4am", "8am", "12pm", "4pm", "8pm", "12am"],
+            datasets: [{
+                label: '# of Rides',
+                data: [2575, 12562, 20602, 24607, 28092, 8156],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+        
     </script>
     </body>
 </html>
