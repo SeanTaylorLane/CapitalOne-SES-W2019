@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://bikeshare.metro.net/wp-content/themes/lametro/library/images/logo.png">
+</p>
+
 # What is this?
 This project is a web app for visualizing [Los Angeles bike sharing data](https://bikeshare.metro.net/about/data/). It was made as an entry for [Capital One's Winter 2019 Software Engineering Summit](https://www.mindsumo.com/contests/bikeshare-data).
 
