@@ -84,6 +84,18 @@
                 </div>
             </div>
             
+            <div class="row my-3">
+                <div class="col-12 col-md-6">
+                    <canvas id="distance-per-day"></canvas>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h4>Average Distance Traveled per Day</h4>
+                    <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
+                </div>
+            </div>
+            
+            
+            
         </div>
     <script>
     var regularCommuters = new Chart(
@@ -196,6 +208,47 @@
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
                     'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+        
+    var weekendRideTimes = new Chart(
+        document.getElementById("distance-per-day").getContext("2d"),
+        {
+        type: 'bar',
+        data: {
+            labels: ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"],
+            datasets: [{
+                label: '# of Rides',
+                data: [8.05, 8.27, 9.33, 4.62, 11.21, 0.75, 5.86],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(119, 119, 119, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(119, 119, 119, 1)'
                 ],
                 borderWidth: 1
             }]
