@@ -37,11 +37,11 @@
             
             <div class="row my-3">
                 <div class="col-12 col-md-6">
-                    <canvas id="chart1"></canvas>
+                    <canvas id="regular-commuters"></canvas>
                 </div>
                 <div class="col-12 col-md-6">
-                    <h4>Some graph blah blah</h4>
-                    <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
+                    <h4>Regular commuters</h4>
+                    <p>68.87% of all trips were made by pass-holding commuters (excluding walk-up trips). 89.15% of regular commuters hold a monthly pass.</p>
                 </div>
             </div>
             
@@ -77,7 +77,33 @@
             
         </div>
     <script>
-    var chart1 = document.getElementById("chart1").getContext('2d');
+    var regularCommuters = new Chart(
+        document.getElementById("regular-commuters").getContext('2d'),
+        {
+        type: 'pie',
+        data: {
+            labels: ["Monthly Pass", "Walk-up", "Flex Pass", "Staff Annual"],
+            datasets: [{
+                label: '# of Trips',
+                data: [81304, 41224, 9517, 382],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        }
+    });
+        
+    
     var chart2 = document.getElementById("chart2").getContext('2d');
     var chart3 = document.getElementById("chart3").getContext('2d');
     var chart4 = document.getElementById("chart4").getContext('2d');
@@ -117,7 +143,7 @@
             }
         }
     };
-    var chart1 = new Chart(chart1, config);
+    
     var chart2 = new Chart(chart2, config);
     var chart3 = new Chart(chart3, config);
     var chart4 = new Chart(chart4, config);
