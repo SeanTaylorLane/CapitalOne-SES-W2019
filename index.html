@@ -89,12 +89,20 @@
                     <canvas id="distance-per-day"></canvas>
                 </div>
                 <div class="col-12 col-md-6">
-                    <h4>Average Distance Traveled per Day</h4>
+                    <h4>Average Distance per Day</h4>
                     <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
                 </div>
             </div>
             
-            
+            <div class="row my-3">
+                <div class="col-12 col-md-6">
+                    <canvas id="duration-per-season"></canvas>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h4>Average Duration per Season</h4>
+                    <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
+                </div>
+            </div>
             
         </div>
     <script>
@@ -184,7 +192,7 @@
         }
     });
         
-    var weekendRideTimes = new Chart(
+    var weekdayRideTimes = new Chart(
         document.getElementById("weekday-ride-times").getContext("2d"),
         {
         type: 'bar',
@@ -223,7 +231,7 @@
         }
     });
         
-    var weekendRideTimes = new Chart(
+    var distancePerDay = new Chart(
         document.getElementById("distance-per-day").getContext("2d"),
         {
         type: 'bar',
@@ -249,6 +257,41 @@
                     'rgba(153, 102, 255, 1)',
                     'rgba(255, 159, 64, 1)',
                     'rgba(119, 119, 119, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+        
+    var durationPerSeason = new Chart(
+        document.getElementById("duration-per-season").getContext("2d"),
+        {
+        type: 'bar',
+        data: {
+            labels: ["Spring", "Summer", "Fall", "Winter"],
+            datasets: [{
+                label: 'Average Duration (mins)',
+                data: [30.02, 24.17, 23.55, 26.76],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
                 ],
                 borderWidth: 1
             }]
