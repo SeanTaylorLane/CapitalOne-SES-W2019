@@ -10,9 +10,9 @@
     <body>
         <div class="container">
             
-            <h1 class="text-center font-weight-bold my-4">Bike Sharing in Los Angeles</h1>
+            <h1 class="text-center font-weight-bold my-5">Bike Sharing in Los Angeles</h1>
             
-            <div class="row my-3">
+            <div class="row my-5">
                 <div class="col-12 col-md-6">
                     <h4>Most popular starting stations</h4>
                     <ol>
@@ -34,75 +34,76 @@
                     </ol>
                 </div>
             </div>
+
+            <div class="row my-5">
+                    <div class="col-12 col-md-5 border border-secondary rounded py-2">
+                        <h4>Average Trip Duration</h4>
+                        <p>25.92 Minutes</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-12 col-md-5 border border-secondary rounded py-2">
+                        <h4>Average Trip Distance</h4>
+                        <p>3.37 Miles</p>
+                    </div>
+            </div>
             
-            <div class="row my-3">
-                <div class="col-12 col-md-6">
-                    <canvas id="regular-commuters"></canvas>
-                </div>
+            <div class="row my-5">
                 <div class="col-12 col-md-6">
                     <h4>Regular commuters</h4>
-                    <p>68.87% of all trips were made by pass-holding commuters (excluding walk-up trips). 89.15% of regular commuters hold a monthly pass.</p>
+                    <p>68.29% of trips were made by regular commuters while a whopping 31.71% of trips were impromptu walk-up purchases! Maybe the number of impromptu purchases speaks towards Metro's marketing efforts or their station placement.</p>
+                </div>
+                <div class="col-12 col-md-6">
+                        <canvas id="regular-commuters"></canvas>
                 </div>
             </div>
             
-            <div class="row my-3">
-                <div class="col-12 col-md-6">
-                    <h4>Average Trip Duration</h4>
-                    <p>25.92 Minutes</p>
-                </div>
-                <div class="col-12 col-md-6">
-                    <h4>Average Distance Traveled</h4>
-                    <p>3.37 Miles</p>
-                </div>
-            </div>
-            
-            <div class="row my-3">
+            <div class="row my-5">
                 <div class="col-12 col-md-6">
                     <canvas id="weekend-riders"></canvas>
                 </div>
                 <div class="col-12 col-md-6">
                     <h4>Weekend riders</h4>
-                    <p>27.06% of trips are taken during the weekend.</p>
+                    <p>Not surprisingly, most trips are made during the week. However, it is still signifigant that about 27.06% of trips are taken during the weekend.</p>
                 </div>
             </div>
+
+            <div class="row my-5">
+                    <div class="col-12 col-md-6">
+                        <canvas id="weekday-ride-times"></canvas>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h4>Weekday Ride Times</h4>
+                        <p>The peak time for bike sharing during the week is between the times of 4pm-8pm. Surprisingly, there is an increasingly high volume of trips from 8am to 8pm. Why are there more trips in the afternoon? Do some people who bike home don't bike to work?</p>
+                    </div>
+            </div>
             
-            <div class="row my-3">
+            <div class="row my-5">
                 <div class="col-12 col-md-6">
                     <canvas id="weekend-ride-times"></canvas>
                 </div>
                 <div class="col-12 col-md-6">
                     <h4>Weekend Ride times</h4>
-                    <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
+                    <p>The peak time for bike sharing over the weekend is between the times of 12pm and 4pm. It seems riders don't wake up early to bike on the weekend!</p>
                 </div>
             </div>
             
-            <div class="row my-3">
+            <div class="row my-5">
                 <div class="col-12 col-md-6">
-                    <canvas id="weekday-ride-times"></canvas>
+                        <h4>Average Distance per Day</h4>
+                        <p>The average distance per day is fairly even throughout the week. However, there is a surprising dip on Saturday. Why do weekend bikers avoid Saturday? Is there a conflict between leisure activities that doesn't exist on Sunday?</p>
                 </div>
-                <div class="col-12 col-md-6">
-                    <h4>Weekday Ride Times</h4>
-                    <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
-                </div>
-            </div>
-            
-            <div class="row my-3">
                 <div class="col-12 col-md-6">
                     <canvas id="distance-per-day"></canvas>
                 </div>
-                <div class="col-12 col-md-6">
-                    <h4>Average Distance per Day</h4>
-                    <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
-                </div>
             </div>
             
-            <div class="row my-3">
+            <div class="row my-5">
                 <div class="col-12 col-md-6">
-                    <canvas id="duration-per-season"></canvas>
+                        <h4>Average Duration per Season</h4>
+                        <p>The average trip duration per season is very even, with the highest average in the Spring and the lowest in the Fall. Does this have anything to do with temperature, or is culture playing a role here?</p>
                 </div>
                 <div class="col-12 col-md-6">
-                    <h4>Average Duration per Season</h4>
-                    <p>This is some graph. As you can see here it is a graph that has graphic content. The content represents information as a visual representation. It's a graph.</p>
+                    <canvas id="duration-per-season"></canvas>
                 </div>
             </div>
             
