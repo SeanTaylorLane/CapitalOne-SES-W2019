@@ -14,7 +14,9 @@ I used Python 3.6 and [pandas](https://pandas.pydata.org/) or cleaning and aggre
 
 All of the data manipulation happened within multiple [Jupyter](http://jupyter.org/) notebooks. I created a notebook for each prompt of the assignment, which helped me organize my thoughts better. You can see all the notebooks inside the `/data` directory.
 
-Everything python-related in this project lives inside a [virtual environment](https://docs.python.org/3/tutorial/venv.html) located in the `/venv` directory. This way, I could work on the project from different machines without having to handle dependencies or versioning for each machine. It also makes it easier for you to run the project from your machine. NOTE: Virtual environment probably won't work anymore because I had to delete it to get GitHub pages to work. Revert to [this commit](https://github.com/SeanTaylorLane/CapitalOne-SES-W2019/tree/3ae2bb3086759b9ade227c8de6456a490d17643b) if you're trying to run this project on your machine.
+Everything python-related in this project lives inside a [virtual environment](https://docs.python.org/3/tutorial/venv.html) located in the `/venv` directory. This way, I could work on the project from different machines without having to handle dependencies or versioning for each machine. It also makes it easier for you to run the project from your machine. 
+
+NOTE: I had to remove the virtual environment entirely to get GitHub pages to work. Revert to [this commit](https://github.com/SeanTaylorLane/CapitalOne-SES-W2019/tree/3ae2bb3086759b9ade227c8de6456a490d17643b) if you're trying to run this project on your machine.
 
 ### Data visualization
 After playing around with the data in my Jupyter notebooks, I ported the output to and generated visualizations with [chart.js](http://www.chartjs.org/). I organized the charts, handled typography, and made the app responsive with [Bootstrap 4](https://getbootstrap.com/).
